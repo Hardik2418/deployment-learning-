@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Field Notes
 
 A basic multi-route Node.js web project using Express, EJS, and MongoDB.
@@ -26,3 +27,7 @@ MongoDB is optional for the first run. Without `MONGODB_URI`, the app uses sampl
 ## Reverse-engineered check
 
 The browser flow is: page request -> Express route -> EJS template -> HTML response. The data flow is: message form -> `POST /messages` -> validation -> Mongoose `Message` model -> MongoDB -> redirect to `/messages`. The API health response exposes whether the database connection is active, which makes deployment troubleshooting direct.
+=======
+# deployment-learning-
+learning the deployment like the senior devops engineer
+>>>>>>> 9bda061177e9b5434e069ec045c5dfa22f6d55ca
