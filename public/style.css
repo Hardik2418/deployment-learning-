@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap');
+
+:root { --ink: #17231f; --muted: #6b7771; --paper: #f5f6f0; --line: #d7ddd4; --accent: #d9fa71; --dark: #203b33; }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: Manrope, sans-serif; }
+.site-header { max-width: 1120px; margin: auto; padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; }
+.brand { color: var(--ink); font-weight: 800; letter-spacing: -.04em; text-decoration: none; font-size: 1.2rem; }
+nav { display: flex; gap: 26px; } nav a, .text-link { color: var(--muted); text-decoration: none; font-size: .86rem; font-weight: 700; } nav a:hover, .text-link:hover { color: var(--ink); }
+.page { max-width: 1120px; min-height: calc(100vh - 150px); margin: auto; padding: 90px 32px 100px; }
+.hero { max-width: 780px; } .eyebrow { color: #66803d; font: 500 .72rem 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .12em; }
+h1 { margin: 22px 0; font-size: clamp(3.3rem, 8vw, 7rem); line-height: .95; letter-spacing: -.08em; } h1 em { color: #739849; font-style: normal; }
+.intro { max-width: 530px; color: var(--muted); line-height: 1.8; font-size: 1.05rem; }
+.actions { margin-top: 35px; display: flex; gap: 28px; align-items: center; } .button { display: inline-block; border: 0; border-radius: 2px; padding: 14px 20px; color: var(--dark); background: var(--accent); font: 800 .82rem Manrope, sans-serif; text-decoration: none; cursor: pointer; } .button:hover { background: #c6e85d; }
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 150px; background: var(--line); border-top: 1px solid var(--line); } .feature-grid article { background: var(--paper); padding: 28px 28px 15px 0; } .feature-number { color: #829087; font: .75rem 'DM Mono', monospace; } h2 { font-size: 1.1rem; margin: 22px 0 10px; } .feature-grid p, .prose p { color: var(--muted); line-height: 1.7; font-size: .92rem; }
+.content-header { max-width: 700px; } .content-header h1 { font-size: clamp(3rem, 7vw, 6rem); } .compact { max-width: 560px; }
+.prose { max-width: 640px; margin-top: 70px; border-top: 1px solid var(--line); padding-top: 25px; } code { font: .85em 'DM Mono', monospace; color: #55783a; }
+.status { max-width: 680px; margin: 44px 0 18px; color: var(--muted); font: .72rem 'DM Mono', monospace; } .status-dot { display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 50%; background: #e1a24b; } .status.connected .status-dot { background: #71a94b; }
+.message-form { display: grid; gap: 15px; max-width: 680px; padding: 25px 0 50px; border-bottom: 1px solid var(--line); } label { display: grid; gap: 8px; color: var(--muted); font-size: .78rem; font-weight: 700; } input, textarea { width: 100%; border: 1px solid var(--line); border-radius: 2px; padding: 13px; color: var(--ink); background: #fbfcf8; font: .95rem Manrope, sans-serif; } textarea { min-height: 110px; resize: vertical; } input:focus, textarea:focus { outline: 2px solid #b7d957; border-color: transparent; }
+.message-list { max-width: 680px; } .message { display: flex; gap: 16px; padding: 24px 0; border-bottom: 1px solid var(--line); } .avatar { flex: 0 0 36px; height: 36px; display: grid; place-items: center; background: var(--dark); color: var(--accent); font-weight: 800; } .message h2 { margin: 0 0 6px; font-size: .95rem; } .message p { margin: 0; color: var(--muted); line-height: 1.6; }
+.site-footer { max-width: 1120px; margin: auto; padding: 24px 32px 40px; color: #91a098; font: .68rem 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .08em; }
+@media (max-width: 650px) { .site-header { padding: 22px 20px; } nav { gap: 12px; } nav a { font-size: .74rem; } .page { padding: 60px 20px; } h1 { font-size: 3.4rem; } .feature-grid { grid-template-columns: 1fr; margin-top: 90px; } .feature-grid article { padding: 22px 0; } .actions { align-items: flex-start; flex-direction: column; gap: 18px; } .site-footer { padding: 20px; } }

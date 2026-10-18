@@ -1,0 +1,16 @@
+<%- include('partials/header', { title }) %>
+<section class="hero">
+  <p class="eyebrow">A small full-stack starter</p>
+  <h1>Build quietly.<br><em>Ship clearly.</em></h1>
+  <p class="intro">A simple multi-route web project powered by Express, rendered with EJS, and ready for MongoDB.</p>
+  <div class="actions">
+    <a class="button" href="/messages">View messages</a>
+    <a class="text-link" href="/about">See how it works <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+<section class="feature-grid">
+  <article><span class="feature-number">01</span><h2>Routes</h2><p>Home, about, and messages pages are rendered directly on the server.</p></article>
+  <article><span class="feature-number">02</span><h2>Data</h2><p>Mongoose stores messages in MongoDB when your connection string is available.</p></article>
+  <article><span class="feature-number">03</span><h2>API</h2><p>Health and message endpoints make deployment checks quick and visible.</p></article>
+</section>
+<%- include('partials/footer') %>

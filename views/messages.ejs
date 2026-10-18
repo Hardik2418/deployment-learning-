@@ -1,0 +1,21 @@
+<%- include('partials/header', { title }) %>
+<section class="content-header compact">
+  <p class="eyebrow">Shared log</p>
+  <h1>Messages</h1>
+  <p class="intro">Leave a note for the next person who opens this project.</p>
+</section>
+<div class="status <%= databaseConnected ? 'connected' : '' %>">
+  <span class="status-dot"></span>
+  <%= databaseConnected ? 'Connected to MongoDB' : 'Using sample data · add MONGODB_URI to persist messages' %>
+</div>
+<form class="message-form" method="post" action="/messages">
+  <label>Name <input name="name" maxlength="80" required placeholder="Your name"></label>
+  <label>Message <textarea name="text" maxlength="500" required placeholder="Write something useful..."></textarea></label>
+  <button class="button" type="submit">Save message</button>
+</form>
+<section class="message-list" aria-label="Messages">
+  <% messages.forEach(message => { %>
+    <article class="message"><div class="avatar"><%= message.name.charAt(0).toUpperCase() %></div><div><h2><%= message.name %></h2><p><%= message.text %></p></div></article>
+  <% }) %>
+</section>
+<%- include('partials/footer') %>
